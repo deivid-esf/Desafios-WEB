@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main{
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 50px 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 300px;
+  grid-template-areas: 
+  "container1 container2 container3"
+  ;
+  justify-content: center;
+  align-content: center;
+}
+
+.container{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container img{
+  width: 64px;
+  height: 40px;
+}
+.container h1{
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display';
+}
+.container p{
+  font-family: 'Lexend deca';
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: .9rem;
+}
+.container button{
+  padding: 10px;
+  border-radius: 25px;
+  width: 75%;
+  font-size: .9rem;
+  border: none;
+  background-color: #f6f6f6;
+  cursor: pointer;
+  
+}
+.container1{
+  grid-area: container1;
+  border-radius: 15px 0 0 15px;
+  background-color: hsl(31, 77%, 52%);
+}
+.container1 button{
+  color: hsl(31, 77%, 52%);
+}
+.container1 button:hover{
+  background-color: hsl(31, 100%, 20%);
+  color: hsl(31, 100%, 60%);
+}
+
+.container2{
+  background-color: hsl(184, 100%, 22%);
+  grid-area: container2;
+}
+.container2 button{
+  color: hsl(184, 100%, 22%);
+}
+.container2 button:hover{
+  background-color: hsl(185, 100%, 10%);
+  color: hsl(184, 100%, 34%);
+}
+
+.container3{
+  border-radius: 0  15px  15px 0;
+  background-color: hsl(179, 100%, 13%);
+  grid-area: container3;
+}
+.container3 button{
+  color: hsl(179, 100%, 13%);
+}
+.container3 button:hover{
+  background-color: hsl(178, 100%, 6%);
+  color: #f6f6f6;
+}
+
+@media screen and (max-width: 720px) {
+  main{
+    min-height: 100vh;
+    width: 100%;
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(3, 350px);
+    grid-template-areas: 
+    "container1"
+    "container2"
+    "container3"
+    ;
+    justify-content: center;
+    align-content: center;
+  }
+  .container1{
+    border-radius: 15px 15px 0 0;
+  }
+  .container3{
+    border-radius: 0 0 15px 15px;
+  }
+}

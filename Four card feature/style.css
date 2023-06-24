@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+body{
+  display: flex;
+  background-color: hsl(0, 0%, 98%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150vh;
+  position: relative;
+}
+
+/*Estilo do topo*/
+.topo{
+  text-align: center;
+  margin-bottom: 60px;
+}
+.topo h1{
+  color: hsl(229, 6%, 66%);
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 1;
+}
+.topo h2{
+  color: hsl(234, 12%, 34%);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1;
+}
+.topo p{
+  margin-top: 25px;
+  font-size: 18px;
+  max-width: 800px;
+  color: hsl(229, 6%, 66%);
+  font-weight: 400;
+}
+/*Estilo da grid*/
+.estrutura{
+  height: 100%;
+  display: grid;
+
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 120px);
+  grid-template-areas: 
+  ".......... team-builder ....."
+  "supervisor team-builder calculator"
+  "supervisor karma calculator"
+  ".......... karma ....."
+  ;
+}
+
+/*Estilo dos blocos*/
+.bloco{
+  height: 100%;
+  max-width: 350px;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 5px 10px 15px #cccccc80;
+}
+.bloco img{
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+.bloco h3{
+  color: hsl(234, 12%, 34%);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.bloco p{
+  color: hsl(229, 6%, 66%);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.supervisor{
+  grid-area: supervisor;
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+.team-builder{
+  grid-area: team-builder;
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+.calculator{
+  grid-area: calculator;
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+.karma{
+  grid-area: karma;
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+footer{
+  margin-top: 100px;
+
+  width: 100%;
+  padding: .5em;
+  background-color: #fff;
+}
+.attribution{
+  color: hsl(229, 6%, 66%);
+  text-align: center;
+}
+.attribution a{
+  text-decoration: none;
+  padding: 5px;
+  color: hsl(234, 12%, 34%);
+}
+.attribution a:hover{
+  background-color: hsl(234, 12%, 34%);
+  color: #fff;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 500px){
+  body{
+    padding-top: 50px;
+  }
+  .topo, .estrutura{
+    width: 90%;
+  }
+  .estrutura{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 250px);
+    grid-template-areas: 
+    "supervisor"
+    "team-builder"
+    "karma"
+    "calculator"
+    ;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1000px){
+  body{
+    padding-top: 50px;
+  }
+  .topo, .estrutura{
+    width: 90%;
+  }
+  .estrutura{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 250px);
+    grid-template-areas: 
+    "supervisor team-builder"
+    "karma calculator"
+    ;
+
+  }
+}

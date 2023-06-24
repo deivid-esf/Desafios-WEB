@@ -1,0 +1,141 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+}
+
+main{
+  width: 50%;
+  height: 75%;
+  box-shadow: 5px 5px 10px #bebebe;
+  border-radius: 20px;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container-img{
+  border-radius: 20px 0 0 20px;
+  width: 50%;
+  height: 100%;
+  background-image: url(images/image-product-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-infos{
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 20px 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.produto{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #a5a5a5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.container-infos h1{
+  font-family: 'Fraunces', 'Times New Roman', Times, serif;
+  font-size: 40px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.container-infos p{
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 28px;
+  color: #a5a5a5;
+}
+.price{
+  display: flex;
+  align-items: center;
+}
+.price h2{
+  font-family: 'Fraunce', 'Times New Roman', Times, serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: hsl(158, 36%, 37%);
+}
+.price p{
+  margin-left: 20px;
+  font-size: 12px;
+  color: #a5a5a5;
+  text-decoration: line-through;
+}
+.container-infos button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700px;
+  font-family: 'Montserrat';
+  padding: 10px;
+  background-color: hsl(158, 36%, 37%);
+}
+.container-infos button img{
+  margin-right: 10px;
+}
+.container-infos button:active{
+  background-color: hsl(158, 36%, 19%);
+}
+
+@media screen and (max-width: 720px){
+  body{
+    background-color: aqua;
+  }
+  main{
+    display: flex;
+
+    width: 90%;
+    height: 90%;
+  }
+
+  .container-img, .container-infos{
+    width: 100%;
+    margin: 0
+  }
+  .container-img{
+    height: 45%;
+    background-image: url(images/image-product-mobile.jpg);
+    border-radius: 20px 20px 0 0;
+  }
+  .container-infos{
+    border-radius: 0 0 20px 20px;
+    height: 55%;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  main{
+    width: 80%;
+    height: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main{
+    width: 60%;
+    height: 70%;
+  }
+}

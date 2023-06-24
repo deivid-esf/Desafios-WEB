@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main{
+  width: 300px;
+  background-color: gray;
+}
+.resultado{
+  height: 50px;
+}
+.box-calculadora{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 50px);
+}
